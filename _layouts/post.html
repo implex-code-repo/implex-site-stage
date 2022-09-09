@@ -1,0 +1,42 @@
+---
+
+---
+<!doctype html>
+{% comment %}
+<!--
+  ~ Copyright (c) 2022. Implex
+  ~ All rights reserved
+  -->
+{% endcomment %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css" />
+    {% include _head/head.html %}
+</head>
+<body>
+  {% include header/header.html black=true %}
+  <div class="post-content">
+    <h1>{{ page.title }}</h1>
+    <div class="post-metadata">
+      <span>{{ page.date | date: "%d.%m.%Y" }}</span><span>{{ page.tag }}</span>
+    </div>
+
+    {{ content }}
+
+    <p>
+      {% assign author = site.authors | where: 'name', page.author | first %}
+      {% if author %}
+      <div >
+        <a href="{{ author.linkedinProfile }}" class="author">  
+          <div class="author-avatar" style="background-image: url({{author.avatarUrl}})"></div>{{ author.name }}
+        </a>
+      </div>
+      {% endif %}
+    </p>
+  </div>
+  {% include footer/footer.html %}
+</body>
+</html>

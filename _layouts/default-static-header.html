@@ -1,0 +1,23 @@
+{% comment %}
+<!--
+  ~ Copyright (c) 2022. Implex
+  ~ All rights reserved
+  -->
+{% endcomment %}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css" />
+    {% include _head/head.html %}
+</head>
+<body>
+  {% include header/header.html black=true %}
+  {{ content }}
+  {% include footer/footer.html %}
+  <script src="../assets/scripts/script.js?q=20220805"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import 'mixins';
+
+.services {
+  background-color: #f5f5f5;
+
+  .content-block {
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      padding-bottom: 60px;
+
+      @include tablet-screen {
+        @include font(38px, 600);
+        padding-bottom: 0;
+      }
+
+      @include small-tablet-screen {
+        @include font(30px, 600);
+        padding-bottom: 0;
+      }
+    }
+
+    .services-container {
+      @include flex(row, center, center);
+
+      @include tablet-screen {
+        @include flex(column, center, center);
+      }
+
+      .service {
+        @include flex(column, center, center);
+        padding: 0 20px;
+        margin: 0 20px;
+        max-width: 560px;
+
+        @include small-desktop-screen {
+          max-width: 460px;
+          padding: 0 20px;
+        }
+
+        @include tablet-screen {
+          max-width: 640px;
+        }
+
+        @include mobile-screen {
+          padding-inline: 20px;
+        }
+
+        &:nth-child(n + 1):nth-child(-n + 1) {
+
+          .service-description {
+            @include tablet-screen {
+              margin-bottom: 60px;
+            }
+          }
+        }
+
+        .icon {
+          @include size(90px, 90px);
+          padding-bottom: 36px;
+        }
+
+        .service-title {
+          @include font(30px, 600);
+          line-height: 1.17;
+          padding-bottom: 26px;
+
+          @include tablet-screen {
+            @include font(28px, 600);
+            padding: 26px 0;
+          }
+
+          @include small-tablet-screen {
+            @include font(24px, 600);
+          }
+        }
+
+        .service-description {
+          @include font(16px, 300);
+          text-align: center;
+          line-height: 1.55;
+
+          @include tablet-screen {
+            @include font(14px, 300);
+          }
+
+          @include small-tablet-screen {
+            @include font(12px, 300);
+          }
+        }
+      }
+    }
+  }
+}

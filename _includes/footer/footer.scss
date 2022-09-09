@@ -1,0 +1,71 @@
+.white-part {
+  background-color: white;
+  padding: 100px 0;
+
+  @include tablet-screen {
+    padding-inline: 20px;
+  }
+
+  .title {
+    @include font(16px, 600);
+    line-height: 1.35;
+
+    @include small-desktop-screen {
+      font-size: 14px;
+    }
+
+    @include small-tablet-screen {
+      font-size: 12px;
+    }
+  }
+
+  .email {
+    @include font(36px, 600);
+    line-height: 1.23;
+    margin-top: 44px;
+
+    @include small-desktop-screen {
+      font-size: 32px;
+    }
+
+    @include small-tablet-screen {
+      font-size: 28px;
+    }
+  }
+
+  .subtitle {
+    @include font(18px, 300);
+    line-height: 1.55;
+    margin-top: 44px;
+
+    @include small-desktop-screen {
+      font-size: 16px;
+    }
+
+    @include small-tablet-screen {
+      font-size: 14px;
+    }
+  }
+
+  .icon {
+    margin-top: 44px;
+  }
+}
+
+.black-part {
+  @include font(15px, 300);
+  line-height: 1.55;
+  background-color: black;
+  color: #939393;
+  padding: 60px 0 30px;
+
+  @include small-desktop-screen {
+    font-size: 14px;
+    padding: 44px 0 14px;
+  }
+
+  @include small-tablet-screen {
+    @include font(12px, 300);
+    padding: 44px 0 14px;
+  }
+}

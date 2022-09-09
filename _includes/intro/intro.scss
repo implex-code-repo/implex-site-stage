@@ -1,0 +1,97 @@
+.intro {
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../assets/img/background/main-bg.webp");
+  background-size: cover;
+  background-position: top;
+
+  .overlay {
+    @include size(100%, 100%);
+    background-color: rgba(0, 0, 0, .7);
+    position: relative;
+
+    .intro-wrapper {
+      @include flex(column, center, center);
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      @include tablet-screen {
+        width: 100%;
+      }
+
+      .title {
+        @include font(72px, 600);
+        padding: 24px 0;
+        max-width: 960px;
+        white-space:nowrap;
+
+        @include tablet-screen {
+          font-size: 68px;
+        }
+
+        @include small-tablet-screen {
+          font-size: 30px;
+        }
+
+        @include mobile-screen {
+          @include font(30px, 600);
+          padding-inline: 10px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .break-line {
+        display: none;
+
+        @include small-desktop-screen {
+          display: block;
+        }
+
+        @include small-tablet-screen {
+          display: none;
+        }
+      }
+
+      .description {
+        padding: 15px 0 30px;
+        font-size: 22px;
+        max-width: 960px;
+        line-height: 1.55;
+
+        @include small-desktop-screen {
+          width: 780px;
+        }
+
+        @include tablet-screen {
+          font-size: 20px;
+          max-width: 640px;
+        }
+
+        @include small-tablet-screen {
+          font-size: 14px;
+          padding-inline: 10px;
+        }
+      }
+
+      .button-wrapper {
+        margin-top: 44px;
+      }
+
+      .button {
+        text-transform: uppercase;
+
+        @include tablet-screen {
+          @include size(220px, 60px);
+        }
+
+        @include small-tablet-screen {
+          @include size(160px, 60px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'mixins';
+
+.partnership {
+  background: url("../../assets/img/background/partnership-bg.webp") no-repeat center center;
+  background-size: cover;
+
+  .overlay {
+    @include size(100%, 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9));
+
+    .content-block {
+      margin: 0 auto;
+      padding: 110px 0;
+      text-align: center;
+
+      @include tablet-screen {
+        max-width: 600px;
+      }
+
+      @include mobile-screen {
+        padding-inline: 20px;
+      }
+    }
+
+    .title {
+      @include tablet-screen {
+        @include font(44px, 600);
+      }
+
+      @include small-tablet-screen {
+        @include font(30px, 600);
+      }
+    }
+
+    .description {
+      @include tablet-screen {
+        @include font(22px, 300);
+      }
+
+      @include small-tablet-screen {
+        @include font(20px, 300);
+      }
+    }
+
+    .button-wrapper {
+      margin-top: 88px;
+    }
+
+    .button {
+      font-family: 'Roboto', Arial, sans-serif;
+
+      @include tablet-screen {
+        @include size(202px, 60px);
+      }
+
+      @include small-tablet-screen {
+        width: 100%;
+      }
+    }
+  }
+}
+

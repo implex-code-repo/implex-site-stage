@@ -33,3 +33,4 @@ imgPrefix: "assets/img/"
 plugins:
   - jekyll-gzip
   - jekyll-sitemap
+GA_id: G-staging
